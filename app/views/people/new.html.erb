@@ -1,0 +1,28 @@
+<h1>New Contact - <%= link_to "Home", people_path %></h1>
+
+
+
+<%= form_for @persons do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <br />
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <br />
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+    <br />
+    <%= f.label :career%>
+    <%= f.text_field :career %>
+    <br />
+    <%= f.label :movie_quote %>
+    <%= f.text_field :movie_quote %>
+    <br />
+    <%= f.check_box :single %>
+    <%= f.label :single? %>
+    <br />
+    <%= f.submit %>
+<% end %>
+
+
+

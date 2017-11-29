@@ -1,0 +1,36 @@
+<h1>
+<%= @persons.first_name + " " + @persons.last_name %>
+</h1>
+<blockquote>
+Age: <%= @persons.age%>
+</blockquote>
+<br />
+<blockquote>
+Single?: <%= @persons.single ? 'Yes' : 'No' %>
+</blockquote>
+<br />
+<blockquote>
+Career: <%= @persons.career%>
+</blockquote>
+<br />
+<blockquote>
+Favorite Movie Quote: <%= @persons.movie_quote%>
+</blockquote>
+<br />
+<i>
+Created At: <%= @persons.created_at %>
+</i>
+<br />
+<i>
+Updated At: <%= @persons.updated_at %>
+</i>
+
+<hr />
+
+<div class='action-buttons'>
+    <%= link_to 'Edit', edit_person_path(@persons) %>
+    <%= link_to 'Delete', person_path(@persons), 
+    method: :delete,
+    data: {confirm: "Really Delete?"} %>
+    <%= link_to "Home", people_path %>
+</div>
